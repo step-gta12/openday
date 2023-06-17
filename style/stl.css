@@ -1,0 +1,605 @@
+/*общее*/
+:root {
+    --bg-color-secondary: linear-gradient(90deg, #C5DB9D 0%, #93C5DD 42.19%, #93C5DD 49.88%, #B9BBED 100%);
+    --section-titles-color: #04558a;
+    --section-titles-bg-color: linear-gradient(180deg, #B2D8F5 0%, rgba(255, 255, 255, 0) 62.55%);
+    --accordion-button-bg: #b9d9f2;
+    --accordeon-item-bg: #dce9f2;
+    --color-white: #ffffff;
+    --color-black: #000;
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+   
+    src: local("Roboto"),
+         url("../fonts/Roboto-Regular.ttf");
+  }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    p, h1, h2, h3, h4{
+        font-family: 'Roboto', sans-serif;
+    }
+    
+
+    .cont {
+      max-width: 1530px;
+      margin: auto;
+      box-shadow: 0 0 30px rgba(0, 0, 0, .25);
+      overflow: hidden;
+      padding: 0px;
+    }
+
+    .bg-wrapper {
+      background: var(--bg-color-secondary);
+    }
+
+    /*шапка*/
+    .banner {
+      width: 100%;
+      height: 600px;
+      background-image: url("img/bg.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color: #ffffff;
+      position: relative;
+      background: var(--bg-color-secondary);
+    }
+
+    .img_banner {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      opacity: 0.5;
+    }
+
+    .banner-text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+
+    }
+
+    .banner-title {
+      text-align: center;
+      font-size: 85px;
+      height: 60%;
+      display: flex;
+      align-items: flex-end;
+      margin: 0px;
+      justify-content: center;
+
+    }
+    /*информация о колледже*/
+
+    .info_about_college{
+        max-width: 1536px;
+        padding: 30px;
+    }
+    .video{
+        float: left;
+        width: 500px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .video video{
+        width: 100%;
+    }
+
+    .info_about_college p{
+        font-size: 20px;
+    }
+    /*регистрация на мероприятия*/
+    .reg {
+        display: flex;
+        justify-content: center;
+      }
+  
+      .registration {
+        background: linear-gradient(90deg, #C5DB9D 0%, #93C5DD 42.19%, #93C5DD 49.88%, #B9BBED 100%);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 50px 0px 50px 0px;
+      }
+  
+      .section-title-block {
+        text-align: center;
+        /* margin-bottom: 20px; */
+        padding: 50px 15px;
+        background: var(--section-titles-bg-color);
+        border-radius: 60px;
+      }
+  
+      .section-title {
+        display: inline-block;
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--section-titles-color);
+        margin-bottom: 10px;
+      }
+      .steps{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .steps img{
+        width: 300px;
+      }
+
+      .line {
+        width: 1px;
+        background-color: #9e9d9d;
+      }
+
+      .step {
+        width: 50%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 10px;
+        flex-wrap: wrap;
+      }
+
+      /* .step__text:nth-child(2n){
+        border-left: 1px solid black;
+      }
+
+      .step__text:nth-child(2n + 1){
+        border-right: 1px solid black;
+      } */
+
+      
+
+      .step__text{
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        /* border-left: 1px solid black; */
+        padding: 0px 20px 0px 20px;
+      }
+      .step__img{
+        width: 49%;
+        /* display: flex; */
+        /* justify-content: center; */
+        padding: 0px 20px 0px 20px;
+      }
+
+      .step__img img {
+        width: 100%;
+        object-fit: cover;
+      }
+      
+
+      /* .step2text{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border-right: 1px solid black;
+        padding: 0px 20px 0px 20px;
+        order: -1;
+      }
+      .step2img{
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        padding: 0px 20px 0px 20px;
+      } */
+
+
+      @media (max-width:680px){
+        /* .step2img{
+        order: -1;
+
+        
+      } */
+      .line {
+        width: 100%;
+        height: 1px;
+      }
+
+
+      .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .step__text, .step__img {
+        width: 100%;
+        align-items: center;
+      }
+
+      .step__img { 
+        order: -2;
+      }
+
+      .line-second {
+        order: -1;
+      }}
+
+
+      .activity {
+        background-color: rgb(255, 255, 255);
+        padding: 10px 60px 60px 60px;
+        width: 100%;
+      }
+  
+      .activity h3 {
+        text-align: center;
+        font-size: 40px;
+      }
+  
+      .accordion-item {
+        border: none;
+      }
+  
+  
+      hr {
+        margin: 0px;
+      }
+  
+  
+      .accordion-body a {
+        text-decoration: none;
+        font-size: 20px;
+      }
+  
+      .accordion-body li {
+        color: rgb(78, 78, 221);
+      }
+  
+      button p {
+        font-size: 25px;
+        margin: 0px;
+        padding: 0px;
+      }
+  
+      /*Модальное окно*/
+      .modalDialog {
+        position: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 99999;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        display: none;
+        pointer-events: none;
+      }
+  
+      .modalDialog h2 {
+        text-align: center;
+      }
+  
+      .modalDialog span {
+        font-weight: bold;
+      }
+  
+  
+      .modalDialog:target {
+        display: block;
+        pointer-events: auto;
+      }
+
+      .modalDialog>div {
+        width: 500px;
+        position: relative;
+        margin: 10% auto;
+        background: #fff;
+        border-radius: 30px;
+      }
+      .modalDialog div hr{
+        margin: 0px;
+      }
+      .modalDialog div h2{
+        background: linear-gradient(90deg, #93C5DD 42.19%, #93C5DD 49.88%, #a5a8ee 100%);
+        padding: 10px;
+        margin-bottom: 0px;
+        border-radius: 30px 30px 0px 0px;
+      }
+      .modalDialog div p{
+        
+        padding: 10px;
+        
+      }
+      
+      
+  
+      .section-title-block {
+        text-align: center;
+        /* margin-bottom: 20px; */
+        padding: 50px 15px;
+        background: var(--section-titles-bg-color);
+        border-radius: 60px;
+      }
+  
+      .section-title {
+        display: inline-block;
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--section-titles-color);
+        margin-bottom: 10px;
+      }
+  
+  
+      .close {
+        background: #606061;
+        color: #FFFFFF;
+        line-height: 25px;
+        position: absolute;
+        right: -6px;
+        text-align: center;
+        top: -5px;
+        width: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        -moz-box-shadow: 1px 1px 3px #000;
+        -webkit-box-shadow: 1px 1px 3px #000;
+        box-shadow: 1px 1px 3px #000;
+      }
+  
+      .close:hover {
+        background: #eceff0;
+      }
+      
+      .calendar {
+        background: linear-gradient(90deg, #C5DB9D 0%, #93C5DD 42.19%, #93C5DD 49.88%, #B9BBED 100%);
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .calendar h3 {
+        text-align: center;
+        margin-bottom: 10px;
+  
+      }
+  
+      .calendar img {
+        display: flex;
+        margin: auto;
+        width: 1136px;
+        border-radius: 20px;
+      }
+      .popup__bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s all;
+      }
+
+      .popup__bg.active {
+        opacity: 1;
+        pointer-events: all;
+        transition: 0.5s all;
+      }
+
+      .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        background: #fff;
+        width: 400px;
+        padding: 25px;
+        transition: 0.5s all;
+      }
+
+      .popup.active {
+        transform: translate(-50%, -50%) scale(1);
+        transition: 0.5s all;
+      }
+
+      .close-popup {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .calendar__test {
+        position: relative;
+        width: 90%;
+        /* overflow: scroll; */
+
+      }
+
+      .wrapper {
+        width: 100%;
+        /* display: flex; */
+        /* align-items: flex-start; */
+        justify-content: center;
+      }
+
+      .map__wrapper {
+        width: 100%;
+        position: relative;
+      }
+
+      .map__wrapper img {
+        width: 100%;
+      }
+
+      .map__wrapper svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .day {
+        fill: none;
+        cursor: pointer;
+        pointer-events: all;
+        /*stroke: #000;
+        stroke-width: 5px;*/
+      }
+
+      .popup__hint {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 7px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: none;
+        width: 200px;
+      }
+
+      .infobg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: 0.3s all;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .infobg.active {
+        pointer-events: all;
+        opacity: 1;
+        transition: 0.3s all;
+      }
+
+      .info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        width: 500px;
+        border-radius: 30px;
+        padding-bottom: 10px;
+      }
+
+      .info__datetime{
+        margin-bottom: 0px;
+        background: linear-gradient(90deg, #93C5DD 42.19%, #93C5DD 49.88%, #a5a8ee 100%);
+        border-radius: 30px 30px 0px 0px;
+        padding: 10px 10px 0px 10px;
+        text-align: center;
+      }
+      .info__title{
+        background: linear-gradient(90deg, #93C5DD 42.19%, #93C5DD 49.88%, #a5a8ee 100%);
+        padding: 0px 10px 10px 10px;
+        text-align: center;
+      }
+      .info__text{
+        padding: 10px;
+      }
+      .info h4{
+        padding: 0px 10px 0px 10px;
+        margin: 0px;
+      }
+      .adres{
+        padding: 0px 10px 0px 10px;
+        margin: 0px;
+      }
+      .info_phone, .info_wh, .info_mail{
+        padding: 0px 10px 0px 10px;
+        margin: 0px;
+      }
+      .info_phone :nth-child(1){
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      @media (max-width:1050px) and (min-width:680px){
+          .step{
+            width: 70%;
+          }
+      }
+      @media (max-width:450px) and (min-width:300px){
+        .step{
+          width: 70%;
+        }
+    }
+    @media (max-width:299px) and (min-width:0px){
+        .step{
+          width: 70%;
+        }
+    }
+
+
+    @media (max-width:450px) and (min-width:0px) {
+        .banner-title{
+            font-size: 60px;
+        }
+      }
+
+    @media (max-width:750px) and (min-width:0px) {
+        .video{
+            width: 100%;
+        }
+      }
+      @media (max-width:350px) and (min-width:0px) {
+        .info_about_college{
+            padding: 10px;
+        }
+        .step{
+            padding: 10px;
+        }
+      }
+      @media (max-width: 550px) and (min-width: 0px) {
+         
+        .activity {
+          padding: 0px;
+        }
+      }
+  
+      @media (max-width:450px) and (min-width:0px) {
+        .modalDialog>div {
+          width: 90%;
+          position: relative;
+          margin: 10% auto;
+          background: #fff;
+        }
+      }
+      @media (max-width:510px) and (min-width:0px) {
+        .info {
+        width: 300px;
+      }
+      }
+      @media (max-width:310px) and (min-width:0px) {
+        .info {
+        width: 200px;
+      }
+      }
+      
