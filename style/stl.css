@@ -287,6 +287,7 @@
         transition: opacity 400ms ease-in;
         display: none;
         pointer-events: none;
+        overflow: auto;
       }
   
       .modalDialog h2 {
@@ -490,6 +491,7 @@
         transition: 0.3s all;
         pointer-events: none;
         z-index: 10;
+        overflow-y: auto;  
       }
 
       .infobg.active {
